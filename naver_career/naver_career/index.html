@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./reset.css">
+  <!-- reset.css는 항상 style.css 위에 -->
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/87d335445a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <!-- 로고를 거의 h1으로 하는지? -->
+    <nav>
+      <h1><a href=""><span class="txt-hide">naver_career</span></a></h1>
+      
+        <!-- <img src="./images/naver.png" alt="NAVER"> -->
+      
+      <!-- h1에다가 텍스트를 써줘야되는데 이건 네이버로고 a태그라 
+      어떻게 해야될지 모르겠다. h1안에 img태그에 alt값이 있으니깐
+      상관이 없나? a태그를 밖으로 꺼내야되는건가? -->
+      <ul class="nav-bar">
+        <li><a href=""><img src="./images/person.svg" alt="">내 지원서</a></li>
+        <li><a href=""><img src="./images/pencil.svg" alt="">지원문의</a></li>
+        <li><a href="">English</a></li>
+      </ul>
+      <button class="nav-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+  </header>
+  <main>
+    <section class="slide">
+      <h2 class="txt-hide">홈 본문</h2>
+      <div class="ddd">
+        <ul class="cont-slide">
+          <li class="sl-list1">
+           <div class="li-cont">
+              <em>BE ON THE FAST TRACK</em>
+              <p>네이버 월간 영입 : 기술 직군</p>
+              <button>지원하기<i class="fas fa-chevron-right"></i></button>
+           </div>
+          </li>
+        </ul>
+        <!-- <ul class="cont-slide">
+          <li class="sl-list2">
+            <p>BE ON THE FAST TRACK</p>
+            <p>네이버 월간 영입 : 기술 직군</p>
+            <button>지원하기</button>
+          </li>
+        </ul> -->
+  
+        <ul class="cont-menu">
+          <div>
+            <li>
+              <a href="">
+                개발
+              </a>
+            </li>
+            <li>
+              <a href="">
+                설계(디자인)
+              </a>
+            </li>
+          </div>
+          <div>
+            <li>
+              <a href="">
+                콘텐츠&서비스
+              </a>
+            </li>
+            <li>
+              <a href="">
+                경영지원
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Culture Report</h2>
+      <article>
+        <h3>제도와 문화</h3>
+        <ul>
+          <li>
+            <a href="">
+              <strong>일하는 문화</strong>
+              <p>유연한 근무 제도와 호칭 체계, <br>
+                 본인 전결화, 평등한 기회</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>조직</strong>
+              <p>일 중심의 유연하고 빠른 조직, <br>
+                Open Career Chance</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>성과와 보상</strong>
+              <p>성과 중심 문화와 다각도 리뷰 기반의 평가, <br>
+                미래가치 공유</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>커뮤니케이션</strong>
+              <p>회사와 직원 간 쌍방향 소통</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>공간</strong>
+              <p>몰입을 돕는 업무 공간과 <br>
+                휴식을 위한 편의시설</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>자기 개발</strong>
+              <p>사내·외 지식 공유와 <br>
+                글로벌 역량 강화</p>
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>건강과 가족</h3>
+        <ul>
+          <li>
+            <a href="">
+              <strong>건강 케어</strong>
+              <p>아프기 전 미리 예방하고 <br>
+              조기에 진단하는 프로그램</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>가족 케어</strong>
+              <p>직원 가족의 건강까지 케어</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>휴가 지원</strong>
+              <p>리프레시 휴가, 휴양 시설 지원, <br>
+              경조사 및 난임 휴가</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <strong>건강 먹거리</strong>
+              <p>몸에 좋은 식습관을 돕는<br>
+              식당과 카페</p>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <dl>
+      <dt>NAVER Career 약관 및 정책</dt>
+      <dd>PC버전</dd>
+      <dd>개인정보 처리방침</dd>
+    </dl>
+    <address>
+      <a href="">
+        © NAVER Corp.
+      </a>
+    </address>
+
+    <!-- <div>
+      <strong><a href="">개인정보 처리방침</a></strong>
+      <span>©</span>
+      <a href="">NAVER Corp.</a>
+    </div> -->
+    <!-- <button>관련사이트</button>
+    <ul>
+      <li><a href="">NAVER Corporation</a></li>
+      <li><a href="">NAVER Developers</a></li>
+      <li><a href="">NAVER Design</a></li>
+    </ul> -->
+  </footer>
+</body>
+
+</html>

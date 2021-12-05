@@ -1,0 +1,552 @@
+@charset "utf-8";
+
+/* mobile 우선 */
+body {}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+}
+
+nav h1 {
+  cursor: pointer;
+  width: 118px;
+  height: 12px;
+  background: url('./images/naver.png') -54px -80px / 250px 250px;
+  color: #fff;
+  z-index: 10;
+}
+
+nav h1 a {}
+
+nav .nav-bar {
+  display: none;
+}
+
+nav .nav-bar li {
+  margin: 0 8px;
+}
+
+nav .nav-bar li a {
+  height: 17px;
+  line-height: 20px;
+}
+
+nav .nav-bar li:last-child a {
+  color: #bbb;
+}
+
+nav .nav-bar li a img {
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+  /* 이미지 태그는 색이 안바뀐다 */
+}
+
+/* english 글자가 위로가있는 이유? */
+nav .nav-btn {
+  border: none;
+  color: #fff;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+nav .nav-btn i {
+  font-size: 20px;
+}
+
+/* main */
+
+main {
+  background-color: #eff0f2;
+  position: absolute;
+  top: 0;
+}
+
+main .slide {
+  width: 100vw;
+  /* width: 100%; */
+  /* 가로를 100vw로 하니까 꽉 찼는데, 왜 100%하면 안차지? */
+  max-width: 980px;
+  margin: 0 auto;
+
+}
+
+.slide {
+  /* transition: all .1s; */
+
+}
+
+.slide .ddd {
+  width: 100%;
+  /* height: 314px; */
+  top: 0;
+  z-index: 1;
+}
+
+.slide .cont-slide {
+  width: 100%;
+  z-index: 1;
+}
+
+.slide .cont-slide .sl-list1 {
+  width: 100%;
+  height: 314px;
+  min-width: 350px;
+  max-width: 980px;
+  /* 축약! 드디어 됨 background 축약 순서:*/
+  /* background-image: url("./images/bg-img1.png");
+  background-repeat: no-repeat;
+  background-position: top center; 
+  background-size: cover; 
+  position과 size는 일부 값의 단위를 공유하므로 꼭 슬래시로 구분!
+  size만 사용할 경우에도(축약형에서) position 값을 꼭 명시해줘야됨*/
+  background: url("./images/bg-img1.png") no-repeat top center / cover;
+
+}
+
+.cont-slide .sl-list1 .li-cont {
+  text-align: center;
+  padding-top: 130px;
+
+}
+
+.sl-list1 .li-cont em {
+  font-size: 27px;
+  font-weight: bold;
+  color: #fff;
+
+}
+
+/* 결국 p에다가 마진 탑을 주어서 띄워주었는데,
+em에다가 마진 바텀을 주는거는 왜 안될까? 
+-> p는 블럭요소라서 상하좌우 마진 가능.
+-> em은 인라인요소라서 좌우 마진만 가능.*/
+.sl-list1 .li-cont p {
+  font-size: 22px;
+  margin-top: 7px;
+  color: #fff;
+}
+
+.sl-list1 .li-cont button {
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: .6;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* cont-menu */
+
+.slide .cont-menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* max-width: 980px; */
+}
+
+.slide .cont-menu div {
+  display: flex;
+  flex: 1;
+}
+
+.slide .cont-menu div li {
+  height: 78px;
+  flex: 1;
+  border: 1px solid #ddd;
+  /* border-collapse를 collapse로 해주었는데 왜 안변하지? 
+  -> border-collapse는 테이블에 적용해주는 속성이기 때문!여기에는 적용안됨*/
+  box-sizing: border-box;
+  min-width: 170px;
+  line-height: 70px;
+  text-align: center;
+
+}
+
+/* 화면을 키웠을 때, 헤더랑 메인부분이 분리되는것이 자연스럽게 되게 하려면
+transition을 어디 부분에 주면 되는건지?? */
+
+/* li에 width값을 170으로 주니 굳이 media query를 쓰지 않아도 
+flex-wrap이 되는구나! */
+.slide .cont-menu div li a {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+
+}
+
+/* 여기 li안에 요소를 중간정렬 하려고 했는데
+방법을 못찾아서 inline-block을 주고 가로 값을 100%로 줘서
+가로 센터로 보냈다. 다른방법은 없는지? 
+세로값은 이렇게 해도 안돼서 못함-> line-height를 주어서 해결했는데 
+다른방법은 없는지? */
+
+
+/* section 2번째 */
+
+.container {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 980px;
+  /* margin: 10px auto; */
+  /* position: absolute; */
+  /* top: 100px; */
+  /* left: 0; */
+  background-color: #fff;
+  padding-top: 7px;
+
+}
+
+.container h2 {
+  margin: 20px 20px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(233, 231, 231);
+  font-size: 24px;
+  color: #34d000;
+}
+
+.container article {
+  padding: 0 20px 20px 20px;
+}
+
+.container article h3 {
+  font-size: 15px;
+  padding: 20px 0 13px 0;
+  border-bottom: 2px solid #222222;
+  font-weight: 700;
+}
+
+.container article ul {}
+
+.container article ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.container article ul li a {}
+
+.container article ul li a strong {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.container article ul li a p {
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+}
+
+.container article ul li a p br {
+  display: none;
+}
+
+
+
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  background-color: #eff0f2;
+  height: 65px;
+  padding-top: 37px;
+  border-top: 1px solid #ccc;
+  /* line-height: 92px; */
+  margin: auto 0;
+}
+
+footer .footer_inner {
+
+  width: 980px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_inner .footer_info {
+  display: flex;
+  align-items: center;
+
+}
+
+.footer_info .p {}
+
+.footer_info .p a {}
+
+.footer_info strong {
+}
+
+.footer_info strong a {
+  font-weight: 700;
+}
+
+.footer_info address {
+  margin-left: 5px;
+}
+
+.footer_info address a {}
+
+.footer_inner .toggle_box {
+  position: relative;
+}
+.footer_inner .toggle_box .toggle_btn {
+  font-size: 12px;
+  width: 224px;
+  padding: 0 20px;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  background-color: #eff0f2;
+  text-align: left;
+}
+.footer_inner .toggle_box .active.toggle_btn {
+  background-color: #fff;
+}
+
+.footer_inner .toggle_box .btn_list {
+  display: none;
+  width: 224px;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  position: absolute;
+  bottom: 34px;
+}
+
+.footer_inner .toggle_box .close.btn_list{
+  display: block;
+  
+}
+
+.footer_inner .toggle_box .btn_list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.footer_inner .toggle_box .btn_list li a {}
+
+
+
+
+@media screen and (min-width: 680px) and (max-width: 980px) {
+  /* 여기를 max-width: 980px로 바꾸고싶은데 바꾸면 li부분이 이상해짐 */
+  .container article ul {
+    /* margin: 0 10px; */
+  }
+
+  .container article ul li {
+    min-width: 100px;
+    width: 43vw;
+  }
+  footer{
+    position: relative;
+    top: 1695px;
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 100vw) {
+
+  main{
+    padding-bottom: 120px;
+  }
+  .container {
+    width: 100vw;
+    margin: 10px auto;
+    padding-top: 0;
+    border: 1px solid #ddd;
+  }
+
+  .container h2 {
+    box-sizing: border-box;
+    height: 215px;
+    width: 100vw;
+    max-width: 980px;
+    background: url(./images/bg-img1.png) no-repeat center center / cover;
+    border: none;
+    color: #fff;
+    font-size: 52px;
+    text-align: center;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* margin: auto 0; */
+    /* line-height: 215px; */
+    margin: 0;
+    padding: 80px;
+  }
+
+  .container article {
+    /* max-width: 880px; */
+    margin: 0 auto;
+
+  }
+
+  .container article h3 {
+    margin-top: 25px;
+    border-bottom: none;
+
+  }
+
+  .container article ul li {
+    /* padding: 25px 0; */
+  }
+
+  .container article ul li a {}
+
+  .container article ul li a strong {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2db400;
+    font-weight: bold;
+
+  }
+
+  .container article ul li a p {
+    color: #666;
+  }
+
+
+  .container article ul {
+    /* height: 337px; */
+    display: grid;
+    gap: 10px;
+    /* justify-content: space-around; */
+    /* align-content: space-between; */
+    /*justify-content: space-between;을 넣으면 일정하게 gap이 생긴다.. */
+    grid-template-columns: repeat(auto-fit, minmax(282px, auto));
+    /* grid-template-columns: minmax(150px, auto) 1fr 1fr; */
+    grid-auto-rows: 160px;
+  }
+
+  .container article ul li {
+    /* min-width: 250px;
+    width: 40vw; */
+    box-sizing: border-box;
+    border: 3px solid #f5f5f5;
+    margin: 10px;
+    text-align: center;
+    /* box-sizing: border-box; */
+  }
+
+  .container article ul li a p br {
+    display: inline;
+  }
+
+  /* footer */
+  
+  .only_mob {
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: 980px) and (max-width: 100vw) {
+
+  /* 이게 사이즈가 커질 때 transition을 어디다가 줘야지 
+  자연스럽게 커지나요? */
+
+
+  .header {
+    background-color: #fff;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  .header nav {
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  nav h1 {
+    width: 160px;
+    height: 17px;
+    background: url('./images/naver.png') 0 -130px / 200px 200px;
+
+  }
+
+  nav .nav-bar {
+    display: flex;
+  }
+
+  nav .nav-btn {
+    display: none;
+  }
+
+  main {
+    
+    position: relative;
+    margin: 0 auto;
+
+  }
+
+  .slide {
+    padding-top: 30px;
+    transition: all .1s;
+  }
+
+  .slide .cont-menu .ddd .cont-slide {
+    height: 137px;
+  }
+
+  .slide .cont-menu div li {}
+
+  .cont-slide {}
+
+  .slide .cont-slide .sl-list1 {
+    height: 412px;
+  }
+
+  /* 여기 부모요소를 하나를 없애면 높이가 적용이 안됨. 이유가 뭘까? */
+  .cont-slide .sl-list1 .li-cont em {
+    font-size: 70px;
+  }
+
+  .cont-slide .sl-list1 .li-cont p {
+    font-size: 40px;
+  }
+
+  .cont-slide .sl-list1 .li-cont button {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 5px 100px;
+    background-color: rgba(256, 256, 256, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+  }
+
+  .cont-menu {
+    background-color: #fff;
+
+  }
+}
